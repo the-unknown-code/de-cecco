@@ -3,7 +3,7 @@ import { colors, fonts } from '../../styles/theme';
 
 export const TINTS = {
 	white: 'white',
-	blue: 'blue',
+	cyan: 'cyan',
 };
 
 const tintKeys = Object.keys(TINTS) as Array<keyof typeof TINTS>;
@@ -13,15 +13,25 @@ export type Tint = typeof tintKeys[number];
 export const themes = {
     [TINTS.white]: {
         background: colors.white,
-        hoverBackground: colors.blue,
-        color: colors.blue,
+        hoverBackground: colors.cyan,
+        color: colors.cyan,
         hoverColor: colors.white,
+        border: 'none',
+        borderRadius: '999px'
+    },
+    [TINTS.cyan]: {
+        background: colors.cyan,
+        hoverBackground: colors.white,
+        color: colors.white,
+        hoverColor: colors.cyan,
         border: 'none',
         borderRadius: '999px'
     }
 }
 
+
 export const StyledSimpleButton = styled.button`
+
     position: relative;
     display: inline-flex;
     justify-content: center;

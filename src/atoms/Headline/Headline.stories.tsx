@@ -1,7 +1,7 @@
 import React from 'react';
 import { Meta } from '@storybook/react';
-
 import  Headline from './Headline';
+import { Tint } from './Headline.style'
 
 export default {
   title: 'Example/Atoms/Headline',
@@ -15,4 +15,4 @@ export default {
   }
 } as Meta;
 
-export const Primary: React.VFC<{}> = ({ variant }) => <Headline label="Novità" tint={ variant }></Headline>;
+export const Primary: React.VFC<{variant: Tint}> = ({ variant }) => <Headline label="Novità" tint={ variant }></Headline>;

@@ -18,10 +18,7 @@ const SimpleButton: React.VFC<SimpleButtonProps> = ({
     ...rest
 }) => {
     return(
-        <ThemeProvider theme={themes[tint]}>
-            <StyledSimpleButton onClick={ onClick } {...rest} >{ label }</StyledSimpleButton>
-        </ThemeProvider>
-        
+        <StyledSimpleButton theme={themes[tint]} onClick={ onClick } {...rest} >{ label }</StyledSimpleButton>
     )
 }
 export default SimpleButton
