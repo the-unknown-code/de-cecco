@@ -12,8 +12,8 @@ const getSlideVariant = (carousel: boolean) => {
             --border-radius: 0 0 .5rem .5rem;
         `
     }
-
-     return `
+    
+    return `
         --border-radius-mobile: .5rem;
         --border-radius: .5rem;
     `

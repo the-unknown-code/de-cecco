@@ -1,8 +1,8 @@
-import React, { PropsWithChildren } from 'react';
+import React from 'react';
 import { StyledCarouselSlide, StyledCarouselSlideBackground, StyledCarouselSlideWrapper, StyledCarouselSlideTitle, StyledCarouselSlideHeadline } from './CarouselSlide.style'
 import SimpleButton from '../SimpleButton/SimpleButton'
 
-interface CarouselSlideProps  extends PropsWithChildren<any>  {
+interface CarouselSlideProps  {
     title?: string,
     headline?: string,
     media: string,
@@ -13,13 +13,12 @@ interface CarouselSlideProps  extends PropsWithChildren<any>  {
 
 
 const CarouselSlide: React.VFC<CarouselSlideProps> = ({
-    children,
     title,
     headline,
     media,
     mediaAlt,
     buttonLabel,
-    carousel,
+    carousel = false,
     ...rest
 }) => {
     return(

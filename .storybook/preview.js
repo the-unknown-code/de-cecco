@@ -3,13 +3,7 @@ import { INITIAL_VIEWPORTS } from "@storybook/addon-viewport";
 
 export const decorators = [
   (Story) => (
-    <div
-      style={{
-        width: "100%",
-        height: "1px",
-        minHeight: "480px",
-      }}
-    >
+    <div>
       <Story />
     </div>
   ),
