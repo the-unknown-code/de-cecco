@@ -77,29 +77,3 @@ export const StyledCarouselSlideTitle = styled.p`
     letter-spacing: 0.04em;
     line-height: 1.15;	
     `
-
-export const StyledCarouselSlideHeadline = styled.span`
-    position: relative;
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    padding-top: .75rem;
-
-    color: ${colors.white};
-    font-family: ${fonts.pathway.family};
-    font-weight: ${fonts.pathway.weights.normal};
-    font-size: .75rem;
-    letter-spacing: 0.04em;
-    line-height: 1;	
-    text-transform: uppercase;
-    white-space: nowrap;
-
-    &:before {
-        content: '';
-        position: absolute;
-        top: 0;
-        width: 20px;
-        height: 0;
-        border-top: 2px solid ${colors.yellowDark};
-    }
-    `

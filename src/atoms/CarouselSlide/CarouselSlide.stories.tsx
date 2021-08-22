@@ -5,7 +5,7 @@ import { StyledContainer } from '../../utils/Utils'
 
 
 export default {
-  title: 'Example/CarouselSlide',
+  title: 'Example/Components/CarouselSlide',
   component: CarouselSlide,
   decorators: [
     (Story) => (

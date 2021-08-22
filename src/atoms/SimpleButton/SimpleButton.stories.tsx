@@ -4,7 +4,7 @@ import { Meta } from '@storybook/react';
 import  SimpleButton from './SimpleButton';
 
 export default {
-  title: 'Example/SimpleButton',
+  title: 'Example/Atoms/SimpleButton',
   component: SimpleButton
 } as Meta;
 

@@ -1,6 +1,7 @@
 import React from 'react';
-import { StyledCarouselSlide, StyledCarouselSlideBackground, StyledCarouselSlideWrapper, StyledCarouselSlideTitle, StyledCarouselSlideHeadline } from './CarouselSlide.style'
+import Headline from '../Headline/Headline'
 import SimpleButton from '../SimpleButton/SimpleButton'
+import { StyledCarouselSlide, StyledCarouselSlideBackground, StyledCarouselSlideWrapper, StyledCarouselSlideTitle } from './CarouselSlide.style'
 
 interface CarouselSlideProps  {
     title?: string,
@@ -25,7 +26,7 @@ const CarouselSlide: React.VFC<CarouselSlideProps> = ({
         <StyledCarouselSlide carousel={ carousel } {...rest}>
             <StyledCarouselSlideBackground src={ media } alt={ mediaAlt } />
             <StyledCarouselSlideWrapper>
-                { headline && <StyledCarouselSlideHeadline>{ headline }</StyledCarouselSlideHeadline> }
+                { headline && <Headline label={ headline } tint="white" /> }
                 { title && <StyledCarouselSlideTitle>{ title }</StyledCarouselSlideTitle>  }
                 { buttonLabel && <SimpleButton label={ buttonLabel }></SimpleButton> }
             </StyledCarouselSlideWrapper>
