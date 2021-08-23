@@ -1,8 +1,9 @@
-import React, { PropsWithChildren } from 'react';
-import { StyledCarouselSlide, StyledCarouselSlideBackground, StyledCarouselSlideWrapper, StyledCarouselSlideTitle, StyledCarouselSlideHeadline } from './CarouselSlide.style'
+import React from 'react';
+import Headline from '../Headline/Headline'
 import SimpleButton from '../SimpleButton/SimpleButton'
+import { StyledCarouselSlide, StyledCarouselSlideBackground, StyledCarouselSlideWrapper, StyledCarouselSlideTitle } from './CarouselSlide.style'
 
-interface CarouselSlideProps  extends PropsWithChildren<any>  {
+interface CarouselSlideProps  {
     title?: string,
     headline?: string,
     media: string,
@@ -13,20 +14,19 @@ interface CarouselSlideProps  extends PropsWithChildren<any>  {
 
 
 const CarouselSlide: React.VFC<CarouselSlideProps> = ({
-    children,
     title,
     headline,
     media,
     mediaAlt,
     buttonLabel,
-    carousel,
+    carousel = false,
     ...rest
 }) => {
     return(
         <StyledCarouselSlide carousel={ carousel } {...rest}>
             <StyledCarouselSlideBackground src={ media } alt={ mediaAlt } />
             <StyledCarouselSlideWrapper>
-                { headline && <StyledCarouselSlideHeadline>{ headline }</StyledCarouselSlideHeadline> }
+                { headline && <Headline label={ headline } tint="white" /> }
                 { title && <StyledCarouselSlideTitle>{ title }</StyledCarouselSlideTitle>  }
                 { buttonLabel && <SimpleButton label={ buttonLabel }></SimpleButton> }
             </StyledCarouselSlideWrapper>
