@@ -1,7 +1,7 @@
 import React from 'react';
-import Headline from '../atoms/Headline/Headline'
-import SimpleButton from '../atoms/SimpleButton/SimpleButton'
-import CoverMedia from '../atoms/CoverMedia/CoverMedia'
+import Headline from '../../atoms/Headline/Headline'
+import SimpleButton from '../../atoms/SimpleButton/SimpleButton'
+import CoverMedia from '../../atoms/CoverMedia/CoverMedia'
 import { StyledCarouselSlide, StyledCarouselSlideWrapper, StyledCarouselSlideTitle } from './CarouselSlide.style'
 
 interface CarouselSlideProps  {

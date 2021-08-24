@@ -1,11 +1,11 @@
 import React from 'react';
 import { Meta } from '@storybook/react';
 import  CarouselSlide from './CarouselSlide';
-import { StyledContainer } from '../../utils/Utils'
+import { StyledContainer } from '../../../utils/Utils'
 
 
 export default {
-  title: 'Example/Components/CarouselSlide',
+  title: 'Components/Organisms/CarouselSlide',
   component: CarouselSlide,
   decorators: [
     (Story) => (

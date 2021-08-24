@@ -4,7 +4,7 @@ import SimpleButton from './SimpleButton';
 import { Tint } from './SimpleButton.style'
 
 export default {
-  title: 'Example/Atoms/SimpleButton',
+  title: 'Components/Atoms/SimpleButton',
   component: SimpleButton,
   argTypes: {
     variant: {

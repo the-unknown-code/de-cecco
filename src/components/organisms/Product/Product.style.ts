@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { colors, fonts } from '../../styles/theme'
+import { colors, fonts } from '../../../styles/theme'
 
 export const StyledProductWrapper = styled.div`
     position: relative;
@@ -7,7 +7,7 @@ export const StyledProductWrapper = styled.div`
     height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: justify-start;
+    justify-content: flex-start;
     items-align: center;
     background-color: white;
     padding: 2.25rem 1.25rem;
@@ -22,7 +22,7 @@ export const StyledProductTitle = styled.p`
 
     color: ${colors.yellow};
     font-family: ${fonts.kinney.family};
-    font-size: 1.75rem;
+    font-size: 1.85rem;
     line-height: 1.15;	
     `
 
@@ -30,9 +30,16 @@ export const StyledProductMediaWrapper = styled.div`
     position: relative;
     width: 100%;
     heigth: 0;
-    padding-bottom: 50%;
-    background-color: red;
+    padding-bottom: 42.5%;
     margin-top: auto;
+
+    img {
+        position: absolute;
+        height: 100%;
+        width: auto;
+        left: 50%;
+        transform: translateX(-50%);
+    }
     `
 
 export const StyleProductLabel = styled.p`

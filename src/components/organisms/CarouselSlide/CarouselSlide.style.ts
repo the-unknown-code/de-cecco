@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { colors, fonts, breakpoints } from '../../styles/theme';
+import { colors, fonts, breakpoints } from '../../../styles/theme';
 
 export interface StyledCarouselSlideProps {
     carousel: boolean

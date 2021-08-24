@@ -1,6 +1,5 @@
 import React, { useState } from "react";
-import Headline from '../atoms/Headline/Headline'
-import CoverMedia from "../atoms/CoverMedia/CoverMedia";
+import Headline from '../../atoms/Headline/Headline'
 import { StyledProductWrapper, StyledProductTitle, StyledProductMediaWrapper, StyleProductLabel } from './Product.style'
 
 type Status = 'hover' | 'default'
@@ -30,8 +29,8 @@ const Product: React.VFC<ProductProps> = ({
                 <StyledProductTitle>{ title }</StyledProductTitle>
             </div>
             
-            <StyledProductMediaWrapper onMouseOver={(e) => { setUrl(mediaHover) }} onMouseOut={(e) => { setUrl(media) }} > 
-                <CoverMedia media={url} mediaAlt={url} />
+            <StyledProductMediaWrapper onMouseOver={() => { setUrl(mediaHover) }} onMouseOut={() => { setUrl(media) }} > 
+                <img src={url} alt={url} />
             </StyledProductMediaWrapper>
          
             <StyleProductLabel>{ productLabel }</StyleProductLabel>

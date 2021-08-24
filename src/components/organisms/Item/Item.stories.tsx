@@ -1,11 +1,11 @@
 import React from 'react';
 import { Meta } from '@storybook/react';
 import  CategoryItem from './Item';
-import { StyledContainerGrid } from '../../utils/Utils'
+import { StyledContainerGrid } from '../../../utils/Utils'
 
 
 export default {
-  title: 'Example/Components/Item',
+  title: 'Components/Organisms/Item',
   component: CategoryItem,
   decorators: [
     (Story) => (

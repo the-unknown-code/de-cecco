@@ -1,6 +1,6 @@
 import React from 'react';
-import Headline from '../atoms/Headline/Headline'
-import CoverMedia from '../atoms/CoverMedia/CoverMedia'
+import Headline from '../../atoms/Headline/Headline'
+import CoverMedia from '../../atoms/CoverMedia/CoverMedia'
 import { StyledItem, StyledItemWrapper, StyledItemContent, StyledItemTitle, Type, TYPES } from './Item.style'
 
 

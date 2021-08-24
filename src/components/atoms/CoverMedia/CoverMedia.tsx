@@ -12,7 +12,7 @@ const CoverMedia: React.VFC<CoverMediaProps> = ({
     ...rest
 }) => {
     return (
-        <StyledCoverMedia src={media} alt={mediaAlt} />
+        <StyledCoverMedia src={media} alt={mediaAlt} {...rest} />
     )
 }
 

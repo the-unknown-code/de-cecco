@@ -5,7 +5,7 @@ import { StyledContainer } from '../../../utils/Utils'
 
 
 export default {
-  title: 'Example/Atoms/CoverMedia',
+  title: 'Components/Atoms/CoverMedia',
   component: CoverMedia,
   decorators: [
     (Story) => (

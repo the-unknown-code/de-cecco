@@ -4,7 +4,7 @@ import Headline from './Headline';
 import { Tint } from './Headline.style'
 
 export default {
-  title: 'Example/Atoms/Headline',
+  title: 'Components/Atoms/Headline',
   component: Headline,
   argTypes: {
     variant: {
