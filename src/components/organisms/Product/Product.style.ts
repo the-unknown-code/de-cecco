@@ -29,16 +29,16 @@ export const StyledProductTitle = styled.p`
 export const StyledProductMediaWrapper = styled.div`
     position: relative;
     width: 100%;
-    heigth: 0;
-    padding-bottom: 42.5%;
-    margin-top: auto;
+    height: 100%;
+    margin: 2rem auto;
+    display: flex;
+    justify-content: center;
 
     img {
         position: absolute;
         height: 100%;
         width: auto;
-        left: 50%;
-        transform: translateX(-50%);
+        object-fit: contain;
     }
     `
 

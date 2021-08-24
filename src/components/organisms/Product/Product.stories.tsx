@@ -11,10 +11,7 @@ export default {
   decorators: [
     (Story) => (
       <StyledContainer>
-        <CoverMedia media="https://picsum.photos/id/17/1280/720" />
-        <div style={{ position: 'relative', width: '50%', maxWidth: '420px', height: '100%'}}>
-            <Story />
-        </div>
+          <Story />
       </StyledContainer>
     )
   ],
