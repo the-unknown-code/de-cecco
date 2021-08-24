@@ -46,12 +46,14 @@ export const StyledLabel = styled.span<StyleLabelProps>`
 
     position: relative;
     display: inline-flex;
+    width: min-content;
     margin: 0 .15rem;
     padding: .3rem .5rem;
     border-radius: 3px;
     color: var(--label-color);
     background-color: var(--label-background);
-
+    justify-content: center;
+   
     font-family: ${fonts.pathway.family};
     font-weight: ${fonts.pathway.weights.bold};
     font-size: .75rem;

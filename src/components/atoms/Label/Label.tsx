@@ -1,7 +1,7 @@
 import React from "react";
 import { StyledLabel, Tint } from './Label.style'
 
-interface LabelProps {
+export interface LabelProps {
     label: string,
     tint: Tint
 }
