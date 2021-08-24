@@ -1,6 +1,7 @@
 import React from 'react';
-import Headline from '../Headline/Headline'
-import { StyledItem, StyledItemBackground, StyledItemWrapper, StyledItemContent, StyledItemTitle, Type, TYPES } from './Item.style'
+import Headline from '../atoms/Headline/Headline'
+import CoverMedia from '../atoms/CoverMedia/CoverMedia'
+import { StyledItem, StyledItemWrapper, StyledItemContent, StyledItemTitle, Type, TYPES } from './Item.style'
 
 
 interface CategoryItemProps {
@@ -21,7 +22,7 @@ const CategoryItem: React.VFC<CategoryItemProps> = ({
 }) => {
     return (
         <StyledItem { ...rest }>
-            <StyledItemBackground src={ media } alt={ mediaAlt } />
+            <CoverMedia media={ media } mediaAlt={ mediaAlt } />
             <StyledItemWrapper type={ type }>
                 <StyledItemContent type={ type }>
                     <Headline label={ headline } tint={ type === TYPES.category ? 'white' : 'blue'} />

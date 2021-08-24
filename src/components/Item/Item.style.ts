@@ -47,15 +47,6 @@ export const StyledItem = styled.div`
     overflow: hidden;
     `
 
-export const StyledItemBackground = styled.img`
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
-    pointer-events: none;
-    `
-
 export const StyledItemWrapper = styled.div<StyledCategoryItemProps>`
 
     ${({ type }) => getItemVariant(type)};

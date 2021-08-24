@@ -1,5 +1,4 @@
 import React, { PropsWithChildren } from 'react';
-import { ThemeProvider } from 'styled-components';
 import { StyledSimpleButton, themes, Tint, TINTS } from './SimpleButton.style'
 
 

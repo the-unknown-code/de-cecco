@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { colors, fonts } from '../../styles/theme';
+import { colors, fonts } from '../../../styles/theme';
 
 export const TINTS = {
 	white: 'white',

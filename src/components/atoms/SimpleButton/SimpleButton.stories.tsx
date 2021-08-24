@@ -1,6 +1,6 @@
 import React from 'react';
 import { Meta } from '@storybook/react';
-import  SimpleButton from './SimpleButton';
+import SimpleButton from './SimpleButton';
 import { Tint } from './SimpleButton.style'
 
 export default {
@@ -11,8 +11,12 @@ export default {
       options: ['white', 'cyan'],
       control: { type: 'select' },
       defaultValue: 'white'
+    },
+    label: {
+      control: { type: 'text' },
+      defaultValue: 'Vedi tutti i prodotti'
     }
   }
 } as Meta;
 
-export const Primary: React.VFC<{variant:Tint}> = ({ variant }) => <SimpleButton tint={ variant } label="Vedi tutti i prodotti"></SimpleButton>;
+export const Default: React.VFC<{ variant: Tint, label: string }> = ({ variant, label }) => <SimpleButton tint={variant} label={label}></SimpleButton>;

@@ -33,15 +33,6 @@ export const StyledCarouselSlide = styled.div<StyledCarouselSlideProps>`
     }
     `
 
-export const StyledCarouselSlideBackground = styled.img`
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
-    pointer-events: none;
-    `
-    
 export const StyledCarouselSlideWrapper = styled.div`
     position: absolute;
     width: 100%;
