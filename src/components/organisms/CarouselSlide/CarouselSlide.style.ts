@@ -62,7 +62,7 @@ export const StyledCarouselSlideTitle = styled.p`
     max-width: 320px;
     margin: 1.25rem 0;
 
-    color: ${colors.yellowDark};
+    color: ${colors.yellow};
     font-family: ${fonts.kinney.family};
     font-size: 2.5rem;
     letter-spacing: 0.04em;

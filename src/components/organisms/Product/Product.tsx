@@ -2,8 +2,6 @@ import React, { useState } from "react";
 import Headline from '../../atoms/Headline/Headline'
 import { StyledProductWrapper, StyledProductTitle, StyledProductMediaWrapper, StyleProductLabel } from './Product.style'
 
-type Status = 'hover' | 'default'
-
 interface ProductProps {
     headline: string,
     title: string,
