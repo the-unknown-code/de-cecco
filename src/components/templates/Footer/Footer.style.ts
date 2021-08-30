@@ -70,3 +70,51 @@ export const FooterInputWrapper = styled.div`
         }
     }
     `
+
+export const FooterIconsContainerMobile = styled.div`
+    position: relative;
+    width: 100%;
+    padding: 2rem 0;
+
+    @media screen and (min-width: 768px) {
+        display: none;
+    }
+    `
+
+
+export const FooterIconsContainer = styled.ul`
+    position: relative;
+    width: 100%;
+    
+    justify-content: center;
+    align-items: center;
+    background-color: ${colors.grayLight};
+    padding: 1.75rem;
+    box-sizing: border-box; 
+    display: none;
+
+    li {
+        position: relative;
+        width: 100%;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    @media screen and (min-width: 768px) {
+
+        display: flex;
+        li:not(:last-child):before {
+            content: '';
+            position: absolute;
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background-color: ${colors.cyan};
+            left: 100%;
+            top: 2rem;
+        }
+    }
+    
+    `

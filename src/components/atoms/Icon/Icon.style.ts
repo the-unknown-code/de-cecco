@@ -31,11 +31,12 @@ const getIconVariant = (tint: Tint) => {
 export const StyledIconWrapper = styled.div`
     position: relative;
     width: 100%;
+    height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    
+    margin: 0 .5rem;
     `
 
 export const StyledIconLabel = styled.p<StyledIconProps>`
@@ -46,7 +47,7 @@ export const StyledIconLabel = styled.p<StyledIconProps>`
     margin: 0;
 
     padding-top: 1rem;
-    max-width: 180px;
+    max-width: 120px;
     text-align: center;
     
     color: var(--icon-primary);
@@ -71,9 +72,9 @@ export const StyledIcon = styled.div<StyledIconProps>`
 
     img {
         position: relative;
-        width: 100%;
+        widtH: 100%;
         height: 100%;
-        padding: 1rem;
+        padding: .8rem;
         box-sizing: border-box;
     }
     `
