@@ -8,7 +8,7 @@ export default {
   component: Input,
   argTypes: {
     tint: {
-      options: ['white', 'blue'],
+      options: ['white', 'cyan'],
       control: { type: 'select' },
       defaultValue: 'white'
     },

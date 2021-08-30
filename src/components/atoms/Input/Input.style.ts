@@ -48,6 +48,7 @@ export const StyledInput = styled.input<StyledInputProps>`
     font-family: ${fonts.bliss.family};
     font-weight: ${fonts.bliss.weights.normal};
     font-size: .85rem;
+    
 
     ::placeholder {
         color: var(--input-primary);

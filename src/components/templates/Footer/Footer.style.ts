@@ -10,7 +10,7 @@ export const FooterWrapper = styled.footer`
         grid-template-columns: 45% 55%;
         grid-template-rows: auto;
     }
-  
+
     `
 
 export const FooterNewsletterContainer = styled.div`
@@ -18,7 +18,7 @@ export const FooterNewsletterContainer = styled.div`
     width: 100%;
     background-color: ${colors.cyan};
     color: ${colors.white};
-    padding: 1.25rem;
+    padding: 1.75rem;
     box-sizing: border-box;
     `
 
@@ -30,7 +30,8 @@ export const FooterTitle = styled.p`
     font-size: 2.25rem;
     letter-spacing: 0.04em;
     line-height: 1.15;	
-    margin: .6rem 0;
+    margin-top: 0;
+    margin-bottom: .6rem;
     `
 
 export const FooterDescription = styled.p`
@@ -46,12 +47,26 @@ export const FooterDescription = styled.p`
 export const FooterInputWrapper = styled.div`
     position: relative;
     width: 100%;
-    display: flex;
-    align-items: center;
-    gap: 8px;
     margin: 1rem 0;
     
     input {
         flex-grow: 1;
+    }
+
+    button {
+        margin: .5rem 0;
+        width: 100%;
+    }
+
+    @media screen and (min-width: 768px) {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+
+        
+        button {
+            margin: 0;
+            width: auto;
+        }
     }
     `
