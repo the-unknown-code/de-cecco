@@ -61,9 +61,9 @@ export const StyledIcon = styled.div<StyledIconProps>`
     ${({ tint }) => getIconVariant(tint)};
 
     position: relative;
-    width: 4rem;
-    height: 4rem; 
-    flex: 0 0 4rem;
+    width: 5rem;
+    height: 5rem; 
+    flex: 0 0 5rem;
     border-radius: 50%;
     background-color: var(--icon-background);
     display: flex;
@@ -74,7 +74,7 @@ export const StyledIcon = styled.div<StyledIconProps>`
         position: relative;
         widtH: 100%;
         height: 100%;
-        padding: .8rem;
+        padding: 1.1rem;
         box-sizing: border-box;
     }
     `
