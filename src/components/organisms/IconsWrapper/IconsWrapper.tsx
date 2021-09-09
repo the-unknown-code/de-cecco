@@ -1,6 +1,6 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import TooltipIcon from "../../atoms/TooltipIcon/TooltipIcon";
+import TooltipIcon, { TooltipIconProps } from "../../atoms/TooltipIcon/TooltipIcon";
 import bg from '../../../images/bg-placeholder.jpg'
 
 import {
@@ -8,121 +8,47 @@ import {
   StyledIconsWrapperTooltipHolder,
   StyledIconsWrapperTitle,
   StyledIconsWrapperSubtitle,
+  StyledIconsWrapperTooltipGrid,
 } from "./IconsWrapper.style";
 
+interface IconsArray extends Array<TooltipIconProps> {}
+
 interface IconsWrapper {
-  title: string;
-  subtitle: string;
+  title: string
+  subtitle: string,
+  certificates?: IconsArray,
+  properties?: IconsArray,
+  icons?: IconsArray
 }
 
-const IconsWrapper: React.VFC<IconsWrapper> = ({ title, subtitle }) => {
+const IconsWrapper: React.VFC<IconsWrapper> = ({ title, subtitle, certificates, properties, icons }) => {
   return (
     <StyledIconsWrapper>
       <img className="bg" src={bg} alt={bg} />
       <StyledIconsWrapperTitle>{title}</StyledIconsWrapperTitle>
       <StyledIconsWrapperSubtitle>{subtitle}</StyledIconsWrapperSubtitle>
-      <StyledIconsWrapperTooltipHolder>
+
+      { certificates  && 
+      <StyledIconsWrapperTooltipHolder style={{ zIndex: 3 }}>
         <Swiper slidesPerView={3}>
-          <SwiperSlide>
-            <TooltipIcon
-              size="default"
-              icon="https://picsum.photos/121"
-              title="Icon 1"
-              dropShadow={false}
-              tooltip="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-            />
-          </SwiperSlide>
-          <SwiperSlide>
-            <TooltipIcon
-              size="default"
-              icon="https://picsum.photos/121"
-              title="Icon 1"
-              dropShadow={false}
-              tooltip="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-            />
-          </SwiperSlide>
-          <SwiperSlide>
-            <TooltipIcon
-              size="default"
-              icon="https://picsum.photos/121"
-              title="Icon 1"
-              dropShadow={true}
-              tooltip="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-            />
-          </SwiperSlide>
+           { certificates.map(({ ...props }) => <SwiperSlide><TooltipIcon {...props} /></SwiperSlide>) }
         </Swiper>
       </StyledIconsWrapperTooltipHolder>
-      <StyledIconsWrapperTooltipHolder>
+      }
+
+       { properties  && 
+       <StyledIconsWrapperTooltipHolder style={{ zIndex: 2 }}>
         <Swiper slidesPerView={4}>
-          <SwiperSlide>
-            <TooltipIcon
-              size="default"
-              icon="https://picsum.photos/121"
-              title="Icon 1"
-              dropShadow={true}
-              tooltip="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-            />
-          </SwiperSlide>
-          <SwiperSlide>
-            <TooltipIcon
-              size="default"
-              icon="https://picsum.photos/121"
-              title="Icon 1"
-              dropShadow={true}
-              tooltip="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-            />
-          </SwiperSlide>
-          <SwiperSlide>
-            <TooltipIcon
-              size="default"
-              icon="https://picsum.photos/121"
-              title="Icon 1"
-              dropShadow={true}
-              tooltip="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-            />
-          </SwiperSlide>
-          <SwiperSlide>
-            <TooltipIcon
-              size="default"
-              icon="https://picsum.photos/121"
-              title="Icon 1"
-              dropShadow={true}
-              tooltip="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-            />
-          </SwiperSlide>
+           { properties.map(({ ...props }) => <SwiperSlide><TooltipIcon {...props} /></SwiperSlide>) }
         </Swiper>
       </StyledIconsWrapperTooltipHolder>
-      <StyledIconsWrapperTooltipHolder>
-        <Swiper slidesPerView={3}>
-          <SwiperSlide>
-            <TooltipIcon
-              size="small"
-              icon="https://picsum.photos/121"
-              title="Icon 1"
-              dropShadow={true}
-              tooltip="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-            />
-          </SwiperSlide>
-          <SwiperSlide>
-            <TooltipIcon
-              size="small"
-              icon="https://picsum.photos/121"
-              title="Icon 1"
-              dropShadow={true}
-              tooltip="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-            />
-          </SwiperSlide>
-          <SwiperSlide>
-            <TooltipIcon
-              size="small"
-              icon="https://picsum.photos/121"
-              title="Icon 1"
-              dropShadow={true}
-              tooltip="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-            />
-          </SwiperSlide>
-        </Swiper>
-      </StyledIconsWrapperTooltipHolder>
+      }
+
+      
+      <StyledIconsWrapperTooltipGrid>
+        { icons && icons.map(({ ...props }) => <TooltipIcon {...props} />) }
+      </StyledIconsWrapperTooltipGrid>
+
     </StyledIconsWrapper>
   );
 };

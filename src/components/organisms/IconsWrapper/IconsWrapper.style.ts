@@ -33,6 +33,10 @@ export const StyledIconsWrapper = styled.div`
            background-color: ${colors.grayLight};
        }
     }
+
+    .swiper-container {
+        overflow: inherit;
+    }
     `
 
 export const StyledIconsWrapperTooltipHolder = styled.section`
@@ -44,15 +48,36 @@ export const StyledIconsWrapperTooltipHolder = styled.section`
     padding: 2rem 0;
     `
 
+export const StyledIconsWrapperTooltipGrid = styled.section`
+    position: relative;
+    width: 100%;
+    display: grid;
+    gap: 10px;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto;
+    align-items: center;
+    margin: auto;
+    padding: 2rem 0;
+
+    @media screen and (min-width: 768px) {
+        display: flex;
+        justify-content: center;
+    }
+    `
+
 export const StyledIconsWrapperTitle = styled.p`
     position: relative;
     width: 100%;
     color: ${colors.blue};
     font-family: ${fonts.kinney.family};
     font-weight: ${fonts.kinney.weights.normal};
-    font-size: 3rem;
+    font-size: 2rem;
     text-align: center;
     margin: 0;
+
+    @media screen and (min-width: 768px) {
+        font-size: 3rem;
+    }
     `
 
 export const StyledIconsWrapperSubtitle = styled.p`
@@ -62,7 +87,12 @@ export const StyledIconsWrapperSubtitle = styled.p`
     font-family: ${fonts.bliss.family};
     font-weight: ${fonts.bliss.weights.normal};
     font-style: italic;
-    font-size: 1.35rem;
+    font-size: 1rem;
     text-align: center;
-    margin: 2rem 0;
+    margin: 1.35rem 0;
+
+    @media screen and (min-width: 768px) {
+        font-size: 1.35rem;
+        margin: 2rem 0;
+    }
     `

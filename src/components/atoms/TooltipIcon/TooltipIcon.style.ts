@@ -46,7 +46,7 @@ export const StyledTooltipIconWrapper = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 0 1.5rem;
+    margin: .25rem 1.5rem;
     `
 
 export const StyledTooltipIcon = styled.div<StyledTooltipIconProps>`
@@ -77,6 +77,7 @@ export const StyledTooltipIconTitle = styled.p`
     margin: 0;
     color: ${colors.blue};
     
+    text-align: center;
     font-weight: ${fonts.bliss.weights.normal};
     line-height: 1;
 
@@ -94,10 +95,11 @@ export const StyledTooltipIconTitle = styled.p`
 
 export const StyledTooltipIconCTA = styled.div`
     position: relative;
-    width: .7rem;
-    height: .7rem;
+    width: .75rem;
+    height: .75rem;
     border-radius: 50%;
     border: 1px solid ${colors.blue};
+    box-sizing: border-box;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -106,6 +108,7 @@ export const StyledTooltipIconCTA = styled.div`
     font-family: ${fonts.pathway.family};
     font-weight: ${fonts.pathway.weights.normal};
     font-size: .5rem;
+    z-index: 2;
 
     &::before {
         content: 'i';
@@ -116,18 +119,38 @@ export const StyledTooltipIconCTA = styled.div`
 export const StyledTooltipIconHolder = styled.p`
     position: absolute;
     left: 50%;
-    bottom: .85rem;
-    transform: translateX(-50%);
+    top: 100%;
+    transform: translateX(-50%) translateY(-1.1rem);
     width: 100%;
     height: auto;
-    min-width: 80px;
+    min-width: 140px;
     max-width: 180px;
-    padding: .5rem;
     border-radius: 10px;
     text-align: center;
-    font-family: ${fonts.pathway.family};
-    font-weight: ${fonts.pathway.weights.normal};
-    font-size: .65rem;
+    font-family: ${fonts.bliss.family};
+    font-weight: ${fonts.bliss.weights.normal};
+    font-size: .75rem;
     background-color: ${colors.white};
+    box-shadow: 0px 0px 5px 2px rgba(0,0,0,0.05);
     color: ${colors.blue};
+
+    span {
+        width: 100%;
+        display: block;
+        box-sizing: border-box;
+        position: relative;
+        padding: 1rem;
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background-color: white;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 1;
+    }
     `

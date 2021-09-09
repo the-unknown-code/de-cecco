@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { StyledTooltipIconWrapper, StyledTooltipIcon, StyledTooltipIconTitle, StyledTooltipIconCTA, StyledTooltipIconHolder, Size } from './TooltipIcon.style'
 
-interface TooltipIconProps {
+export interface TooltipIconProps {
     icon: string,
     title: string,
     size: Size,
@@ -29,13 +29,13 @@ const TooltipIcon: React.VFC<TooltipIconProps> = ({
     }
 
     return (
-        <StyledTooltipIconWrapper>
+        <StyledTooltipIconWrapper style={{zIndex: hoverValue ? 3 : 'inherit'}}>
             <StyledTooltipIcon size={ size } dropShadow={ dropShadow }>
                 <img src={icon} alt={icon} />
             </StyledTooltipIcon>
             <StyledTooltipIconTitle data-type={size} >{ title }</StyledTooltipIconTitle>
             <StyledTooltipIconCTA   onMouseOver={() => { setValue(true); autoHide(); }} onMouseOut={() => { setValue(false) }}  />
-            { tooltip && hoverValue && <StyledTooltipIconHolder>{ tooltip }</StyledTooltipIconHolder> }
+            { tooltip && hoverValue && <StyledTooltipIconHolder><span>{ tooltip }</span></StyledTooltipIconHolder> }
         </StyledTooltipIconWrapper>
     )
 }
